@@ -1,0 +1,27 @@
+.carousel {
+    max-width: 500px; /* Adjust the width to make the carousel smaller */
+    margin: 0 auto; /* Center the carousel */
+  }
+  
+  .carousel img {
+    border-radius: 10px;
+  }
+  
+  .carousel-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
