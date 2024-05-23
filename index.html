@@ -18,85 +18,134 @@
   </script>
 </head>
 
-
 <link rel="stylesheet" href="styles.css">
 
 <body>
-<header class="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
-  <a class="mr-6 flex items-center" href="#">
-    <img src="logo1.jpeg" alt="Student Nexus Logo" class="w-[5.5rem] h-[5.5rem]  mr-4 rounded-full object-cover"/>
-     
-    <span class="font-bold text-xl">Student Nexus</span>
-  </a>
-  <nav
-    aria-label="Main"
-    data-orientation="horizontal"
-    dir="ltr"
-    class="relative z-10 max-w-max flex-1 items-center justify-center ml-auto hidden lg:flex"
-  >
-    <div style="position: relative;">
-      <ul
-        data-orientation="horizontal"
-        class="group flex flex-1 list-none items-center justify-center space-x-1"
-        dir="ltr"
-      >
+  <header class="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
+    <a class="mr-6 flex items-center" href="#">
+      <img src="logo1.jpeg" alt="Student Nexus Logo" class="w-[5.5rem] h-[5.5rem] mr-4 rounded-full object-cover"/>
+      <span class="font-bold text-xl">Student Nexus</span>
+    </a>
+   
+    <button id="menu-btn" class="block lg:hidden ml-auto focus:outline-none">
+      <svg class="w-6 h-6 text-black-800 dark:text-black-50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+    <nav
+      aria-label="Main"
+      data-orientation="horizontal"
+      dir="ltr"
+      class="relative z-10 max-w-max flex-1 items-center justify-center ml-auto hidden lg:flex"
+    >
+      <div style="position: relative;">
+        <ul
+          data-orientation="horizontal"
+          class="group flex flex-1 list-none items-center justify-center space-x-1"
+          dir="ltr"
+        >
+          <a
+            class="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+            data-radix-collection-item=""
+            href="#"
+          >
+            About
+          </a>
+          <a
+            class="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+            data-radix-collection-item=""
+            href="#"
+          >
+            Sign In
+          </a>
+          <a
+            class="group inline-flex h-9 w-max items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+            data-radix-collection-item=""
+            href="#"
+          >
+            Sign Up
+          </a>
+        </ul>
+      </div>
+      <div class="absolute left-0 top-full flex justify-center"></div>
+    </nav>
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="fixed inset-0 z-20 hidden flex-col bg-white p-4 lg:hidden dark:bg-gray-900">
+      <div class="flex justify-between items-center mb-4">
+        <span class="text-lg font-bold">Menu</span>
+        <button id="close-btn" class="focus:outline-none">
+          <svg class="w-6 h-6 text-gray-800 dark:text-gray-50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <ul class="space-y-2">
         <a
-          class="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50   dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-          data-radix-collection-item=""
+          class="block rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:bg-gray-800 dark:text-gray-50 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:bg-gray-700 dark:focus:text-white"
           href="#"
         >
           About
         </a>
         <a
-        class="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50   dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-        data-radix-collection-item=""
+          class="block rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:bg-gray-800 dark:text-gray-50 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:bg-gray-700 dark:focus:text-white"
           href="#"
         >
           Sign In
         </a>
         <a
-          class="group inline-flex h-9 w-max items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-          data-radix-collection-item=""
+          class="block rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
           href="#"
         >
           Sign Up
         </a>
       </ul>
-    </div>
-    <div class="absolute left-0 top-full flex justify-center"></div>
-  </nav>
-</header>
+    </nav>
+  </header>
+  
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+  
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  </script>
 <main>
   <section class="carousel w-full max-w-[73rem] mx-auto mt-10">
     <div aria-roledescription="carousel" class="relative w-full" role="region">
       <div class="overflow-hidden">
-        <div class="flex transition-transform duration-500 ease-in-out h-[50rem]" id="carouselSlides">
-          <div aria-roledescription="slide" class="min-w-0 shrink-0 grow-0 basis-full h-[50rem] flex justify-center" role="group">
+        <div class="flex transition-transform duration-500 ease-in-out h-[30rem] sm:h-[40rem] md:h-[50rem]" id="carouselSlides">
+          <div aria-roledescription="slide" class="min-w-0 shrink-0 grow-0 basis-full flex justify-center" role="group">
             <img
               src="https://3ef0d246.rocketcdn.me/wp-content/uploads/2023/02/9-1.jpg"
               alt="Slide 1"
-              class="carousel-image rounded-lg"
+              class="carousel-image rounded-lg object-cover h-full"
             />
           </div>
-          <div aria-roledescription="slide" class="min-w-0 shrink-0 grow-0 basis-full h-[50rem] flex justify-center" role="group">
+          <div aria-roledescription="slide" class="min-w-0 shrink-0 grow-0 basis-full flex justify-center" role="group">
             <img
               src="https://orchidfoundation.info/sites/default/files/2021-01/JECRC%20UDML%20College%20of%20Engineering.png"
               alt="Slide 2"
-              class="carousel-image rounded-lg"
+              class="carousel-image rounded-lg object-cover h-full"
             />
           </div>
-          <div aria-roledescription="slide" class="min-w-0 shrink-0 grow-0 basis-full h-[50rem] flex justify-center" role="group">
+          <div aria-roledescription="slide" class="min-w-0 shrink-0 grow-0 basis-full flex justify-center" role="group">
             <img
               src="mess2.jpg"
               alt="Slide 3"
-              class="carousel-image rounded-lg"
+              class="carousel-image rounded-lg object-cover h-full"
             />
           </div>
-          <div aria-roledescription="slide" class="min-w-0 shrink-0 grow-0 basis-full h-[50rem] flex justify-center" role="group">
+          <div aria-roledescription="slide" class="min-w-0 shrink-0 grow-0 basis-full flex justify-center" role="group">
             <img
               src="https://media.licdn.com/dms/image/D5622AQFiLhXx_zf7kQ/feedshare-shrink_800/0/1696417888223?e=2147483647&v=beta&t=rbGF9-Yb6JIznDCAeCUcErZirYJ-DXTZ4EuPqviI-3E"
               alt="Slide 4"
-              class="carousel-image rounded-lg"
+              class="carousel-image rounded-lg object-cover h-full"
             />
           </div>
         </div>
